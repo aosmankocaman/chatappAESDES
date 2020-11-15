@@ -23,21 +23,40 @@ public class anapanel extends JFrame{
 
 
     public anapanel() {
+        connectionStatusLabel.setText("Not Connected");
+
+        ButtonGroup modes = new ButtonGroup();
+        modes.add(CBCRadioButton);
+        modes.add(OFBRadioButton);
+
+
+
+        ButtonGroup methods = new ButtonGroup();
+        methods.add(AESRadioButton);
+        methods.add(DESRadioButton);
+
         final String[] username = new String[1];
         add(rootPanel);
         setTitle("Crypto Messenger");
         setSize(840,880);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-
-
-        //encrypt button
-        encryptButton.addActionListener(new ActionListener() {
+        //connect button
+        connectButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 String usernamefrompanel = (String)JOptionPane.showInputDialog(
                         "Enter Username: ");
                 username[0] = usernamefrompanel;
+            }
+        });
+
+        //encrypt button
+        encryptButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+
+                System.out.println(CBCRadioButton.isSelected());
             }
         });
 
