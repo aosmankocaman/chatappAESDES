@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class Client {
     private Socket socket            = null;
     private Scanner input   = null;
-    private ClientThread clientThread=null;
+    public ClientThread clientThread=null;
+    public Packet packet;
 public Client(String IP,int port) throws Exception{
     try
     {
         socket = new Socket(IP, port);
         System.out.println("Connected");
         clientThread=new ClientThread(socket,this);
-        Thread t=new Thread(clientThread);
-        t.start();
-
+      clientThread.start();
         input  =new Scanner(System.in);
 
     } catch(IOException u)
@@ -23,22 +22,30 @@ public Client(String IP,int port) throws Exception{
     }
 
     String line = "";
-    Packet packet=new Packet("");
+     packet=new Packet("");
 
 
-    while (true)
+    while (packet.isOpen())
     {
             assert input != null;
             line=input.nextLine();
 
             packet=new Packet(line);
+        if(line.equals("quit")){
+            packet.setOpen(false);
+        }
             clientThread.request(packet);
+
+
     }
+    assert input != null;
+    input.close();
 
 
 }
-    public static void main(String[] args) throws Exception {
-        Client client = new Client("localhost", 5000);
-    }
+
+public static void main(String [] args) throws Exception {
+    new Client("localhost",5000);
+}
 
 }

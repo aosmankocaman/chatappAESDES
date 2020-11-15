@@ -48,10 +48,8 @@ public class Server
                 socket=server.accept();
                 System.out.println("connectted");
                 client=new ServerThread(socket,this);
-
-                Thread t=new Thread(client);
+                client.start();
                 clients.add(client);
-                t.start();
             }
 
         }
