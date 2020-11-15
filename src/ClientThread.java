@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.Arrays;
 
 public class ClientThread implements Runnable {
     private Socket socket            = null;
@@ -10,6 +11,7 @@ public class ClientThread implements Runnable {
     private BufferedReader input   = null;
     private ObjectOutputStream out     = null;
     private ObjectInputStream in=null;
+    private KeysAndIV keysAndIV=null;
     public ClientThread(Socket socket,Client client){
         this.socket=socket;
         this.client=client;
@@ -29,6 +31,12 @@ public class ClientThread implements Runnable {
             e.printStackTrace();
         }
         Packet response=new Packet("");
+        try {
+             this.keysAndIV=(KeysAndIV)in.readObject();
+            System.out.println(new String(keysAndIV.getAESIV()));
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
 
         while (true){
             assert in != null;

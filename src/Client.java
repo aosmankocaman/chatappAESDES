@@ -14,19 +14,19 @@ public Client(String IP,int port) throws Exception{
         clientThread=new ClientThread(socket,this);
         Thread t=new Thread(clientThread);
         t.start();
-        // takes input from terminal
+
         input  =new Scanner(System.in);
 
     } catch(IOException u)
     {
         System.out.println(u.toString());
     }
-    // string to read message from input
+
     String line = "";
     Packet packet=new Packet("");
 
-    // keep reading until "Over" is input
-    while (!packet.getMsg().equals("Over"))
+
+    while (true)
     {
             assert input != null;
             line=input.nextLine();
@@ -34,15 +34,7 @@ public Client(String IP,int port) throws Exception{
             packet=new Packet(line);
             clientThread.request(packet);
     }
-    try
-    {
-        input.close();
-        socket.close();
-    }
-    catch(IOException i)
-    {
-        System.out.println(i.toString());
-    }
+
 
 }
     public static void main(String[] args) throws Exception {

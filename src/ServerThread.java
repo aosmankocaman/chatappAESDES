@@ -23,11 +23,18 @@ public class ServerThread implements Runnable {
             this.server.clients.get(i).sendPacket(packet);
         }
     }
+    public void sendKeysAndIV(KeysAndIV packet) throws IOException{
+        dout.writeObject(packet);
+        dout.flush();
+
+    }
     @Override
     public void run()  {
         try {
             dout=new ObjectOutputStream(socket.getOutputStream());
             din=new ObjectInputStream(socket.getInputStream());
+            sendKeysAndIV(server.keysAndIV);
+            System.out.println(new String(server.keysAndIV.getAESIV()));
             while (true){
                 packet= (Packet) din.readObject();
                 sendAll(packet);
