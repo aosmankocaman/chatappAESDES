@@ -2,33 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c65336-76f9-4ec8-91f6-b1d3807ed805" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Gui.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ClientThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/anapanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/CipherBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ClientThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/KeysAndIV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/guitest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/guitest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/test.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +48,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE" value="ToolWindow" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE" value="left" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="308" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -137,7 +135,7 @@
       <workItem from="1605732190776" duration="3071000" />
       <workItem from="1605772060447" duration="4948000" />
       <workItem from="1605793903384" duration="10187000" />
-      <workItem from="1605812947983" duration="1526000" />
+      <workItem from="1605812947983" duration="3320000" />
     </task>
     <servers />
   </component>
@@ -159,19 +157,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/ClientThread.java</url>
-          <line>24</line>
-          <properties class="ClientThread" method="request">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
