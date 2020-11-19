@@ -2,42 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c65336-76f9-4ec8-91f6-b1d3807ed805" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chatApp.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anapanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anapanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anapanel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/anapanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/JavaFeistelCipher/.markers" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/JavaFeistelCipher/org.eclipse.jdt.core/state.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.16.0.20200318-1040.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anapanel$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anapanel$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anapanel$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anapanel$5.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/anapanel$6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guitest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guitest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guitest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anapanel.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/anapanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/CipherBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/CipherBlock.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/anapanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CipherBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/CipherBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CipherBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CipherBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KeysAndIV.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeysAndIV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Packet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Packet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anapanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anapanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anapanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/anapanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/anapanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +87,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="308" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -66,7 +105,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="chatappAESDES" />
@@ -88,6 +127,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="guitest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="guitest" />
+      <module name="chatappAESDES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test" />
       <module name="chatappAESDES" />
@@ -97,10 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.guitest" />
         <item itemvalue="Application.test" />
+        <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -114,7 +161,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605447851934</updated>
-      <workItem from="1605447855673" duration="8480000" />
+      <workItem from="1605447855673" duration="9879000" />
+      <workItem from="1605463867782" duration="880000" />
+      <workItem from="1605469585371" duration="46000" />
+      <workItem from="1605722284832" duration="7555000" />
+      <workItem from="1605732190776" duration="3071000" />
+      <workItem from="1605772060447" duration="4948000" />
+      <workItem from="1605793903384" duration="8403000" />
     </task>
     <servers />
   </component>
@@ -126,7 +179,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -134,5 +189,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ClientThread.java</url>
+          <line>74</line>
+          <properties class="ClientThread" method="close">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/ClientThread.java</url>
+          <line>24</line>
+          <properties class="ClientThread" method="request">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

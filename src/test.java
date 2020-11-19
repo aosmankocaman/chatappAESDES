@@ -26,13 +26,13 @@ public class test {
     }
     public static void main(String[] args) throws Exception {
         KeysAndIV keysAndIV=createKeysAndIV();
-        CipherBlock cipherBlock=new CipherBlock();
+        CipherBlock cipherBlock=new CipherBlock(keysAndIV.getDESIV(),keysAndIV.getAESIV(),keysAndIV.getDESKey(),keysAndIV.getAESKey());
         String message="selamin aleyküm aslan parçası uy heeee";
-        byte[] ciphertext=cipherBlock.AESCBCEncryption(keysAndIV.getAESIV(),keysAndIV.getAESKey(),message.getBytes(StandardCharsets.UTF_8));
-        ciphertext=Base64.getEncoder().encode(ciphertext);
+        byte[] ciphertext=cipherBlock.AESCBCEncryption(message.getBytes(StandardCharsets.UTF_8));
 
-        System.out.println(new String(ciphertext));
-        ciphertext=Base64.getDecoder().decode(ciphertext);
-        System.out.println(new String(cipherBlock.AESCBCDecryption(keysAndIV.getAESIV(),keysAndIV.getAESKey(),ciphertext)));
+        ciphertext=cipherBlock.base64Encoder(ciphertext);
+        System.out.println(new String(cipherBlock.base64Encoder(ciphertext)));
+        ciphertext=cipherBlock.base64Decoder(ciphertext);
+        System.out.println(new String(cipherBlock.AESCBCDecryption(ciphertext)));
     }
 }

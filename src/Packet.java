@@ -1,21 +1,18 @@
 import java.io.Serializable;
 
 public class Packet implements Serializable {
-    private String msg;
+
     private String userName;
     private String mode;
     private String method;
     private byte[] text;
     private boolean isOpen;
-    public Packet(String msg){
-        this.msg=msg;
-        isOpen=true;
-    }
-    public String getMsg(){
-        return this.msg;
-    }
-    public void setMsg(String msg){
-        this.msg=msg;
+    public Packet(String userName,boolean isOpen){
+        this.userName=userName;
+        this.isOpen=true;
+       /* this.method=method;
+        this.mode=mode;*/
+
     }
 
     public String getName() {

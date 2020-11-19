@@ -14,7 +14,7 @@ public class ServerThread extends Thread {
         this.socket=socket;
         this.server=server;
 
-        packet=new Packet("");
+        packet=new Packet("server",true);
     }
     public void sendPacket(Packet packet) throws IOException {
             dout.writeObject(packet);
@@ -39,7 +39,15 @@ public class ServerThread extends Thread {
             System.out.println(new String(server.keysAndIV.getAESIV()));
             while (packet.isOpen()){
                 packet= (Packet) din.readObject();
-                sendAll(packet);
+                System.out.println(packet.isOpen());
+                if(packet.isOpen()){
+                     sendAll(packet);
+                }
+                else{
+                    packet.setOpen(false);
+                    this.sendPacket(packet);
+                    break;
+                }
             }
           close();
         }catch (Exception e){
@@ -47,16 +55,11 @@ public class ServerThread extends Thread {
         };
     }
     public void close() throws Exception{
-        for(int i=0;i<server.clients.size();i++){
-            if( this.equals(server.clients.get(i))){
-                server.clients.remove(i);
-                break;
-            }
-        }
+
+        server.clients.remove(this);
 
         din.close();
         dout.close();
         socket.close();
-
     }
 }

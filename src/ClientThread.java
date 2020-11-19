@@ -12,16 +12,19 @@ public class ClientThread extends Thread {
     private ObjectOutputStream out     = null;
     private ObjectInputStream in=null;
     private KeysAndIV keysAndIV=null;
-    private anapanel _anapanel;
+    private anapanel mainPanel;
     private Packet response;
-    public ClientThread(Socket socket,Client client){
+    private CipherBlock cipherBlock;
+    public ClientThread(Socket socket,Client client,anapanel mainPanel){
         this.socket=socket;
         this.client=client;
+        this.mainPanel=mainPanel;
 
 
     }
     public void request(Packet packet) {
         try {
+            System.out.println(packet.isOpen());
             out.writeObject(packet);
             out.flush();
         }catch (Exception e){
@@ -41,19 +44,23 @@ public class ClientThread extends Thread {
 
         try {
              this.keysAndIV=(KeysAndIV)in.readObject();
-            System.out.println(new String(keysAndIV.getAESIV()));
+             this.cipherBlock=new CipherBlock(keysAndIV.getDESIV(),this.keysAndIV.getAESIV(),this.keysAndIV.getDESKey(),this.keysAndIV.getAESKey());
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-
-        while (client.packet.isOpen()){
+        response=client.packet;
+        while (response.isOpen()){
             assert in != null;
             try {
 
                 response = (Packet) in.readObject();
-                if(response.isOpen()) {
-                    System.out.println(response.getMsg());
-                }
+                if(!response.isOpen())
+                    break;
+
+                mainPanel.msgArea.insert("\n"+response.getName(),mainPanel.msgArea.getText().length());
+               // if(response.isOpen()) {
+                   // System.out.println(response.getName());
+                //}
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
@@ -62,11 +69,17 @@ public class ClientThread extends Thread {
 
 
     }
+    public CipherBlock getCipherBlock(){
+        return this.cipherBlock;
+    }
     public void close(){
+        System.out.println("sase");
         try{
             in.close();
             out.close();
             socket.close();
+            client.socket=null;
+           //System.exit(0);
         }catch (Exception e){
             e.printStackTrace();
         }

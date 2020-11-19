@@ -9,47 +9,64 @@ import java.util.Arrays;
 import java.util.Base64;
 
 public class CipherBlock {
-    public byte[] DESCBCEncryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("DES/CBC/PKCS5Padding");
-        cipher.init(Cipher.ENCRYPT_MODE,key,new IvParameterSpec(iv));
-         return cipher.doFinal(message);
-    }
-    public byte[] DESCBCDecryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("DES/CBC/PKCS5Padding");
-        cipher.init(Cipher.DECRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
-    }
-    public byte[] DESOFBEncryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("DES/OFB/PKCS5Padding");
-        cipher.init(Cipher.ENCRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
-    }
-    public byte[] DESOFBDecryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("DES/OFB/PKCS5Padding");
-        cipher.init(Cipher.DECRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
-    }
-    public byte[] AESCBCEncryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("AES/CBC/PKCS5Padding");
-        cipher.init(Cipher.ENCRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
-    }
-    public byte[] AESCBCDecryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("AES/CBC/PKCS5Padding");
-        cipher.init(Cipher.DECRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
-    }
-    public byte[] AESOFBEncryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("AES/OFB/PKCS5Padding");
-        cipher.init(Cipher.ENCRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
-    }
-    public byte[] AESOFBDecryption(byte [] iv, SecretKey key, byte[] message) throws Exception {
-        Cipher cipher=Cipher.getInstance("AES/OFB/PKCS5Padding");
-        cipher.init(Cipher.DECRYPT_MODE,key,new IvParameterSpec(iv));
-        return cipher.doFinal(message);
+    private byte[] desIV;
+    private byte[] aesIV;
+    private SecretKey aesKey;
+    private SecretKey desKey;
+    public CipherBlock(byte[] desIV,byte[] aesIV, SecretKey desKey, SecretKey aesKey){
+        this.desIV=desIV;
+        this.aesIV=aesIV;
+        this.desKey=desKey;
+        this.aesKey=aesKey;
+
     }
 
+    public byte[] DESCBCEncryption( byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("DES/CBC/PKCS5Padding");
+        cipher.init(Cipher.ENCRYPT_MODE,this.desKey,new IvParameterSpec(this.desIV));
+         return cipher.doFinal(message);
+    }
+    public byte[] DESCBCDecryption( byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("DES/CBC/PKCS5Padding");
+        cipher.init(Cipher.DECRYPT_MODE,this.desKey,new IvParameterSpec(this.desIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] DESOFBEncryption( byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("DES/OFB/PKCS5Padding");
+        cipher.init(Cipher.ENCRYPT_MODE,this.desKey,new IvParameterSpec(this.desIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] DESOFBDecryption(byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("DES/OFB/PKCS5Padding");
+        cipher.init(Cipher.DECRYPT_MODE,this.desKey,new IvParameterSpec(this.desIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] AESCBCEncryption( byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("AES/CBC/PKCS5Padding");
+        cipher.init(Cipher.ENCRYPT_MODE,this.aesKey,new IvParameterSpec(this.aesIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] AESCBCDecryption( byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("AES/CBC/PKCS5Padding");
+        cipher.init(Cipher.DECRYPT_MODE,this.aesKey,new IvParameterSpec(this.aesIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] AESOFBEncryption(byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("AES/OFB/PKCS5Padding");
+        cipher.init(Cipher.ENCRYPT_MODE,this.aesKey,new IvParameterSpec(this.aesIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] AESOFBDecryption(byte[] message) throws Exception {
+        Cipher cipher=Cipher.getInstance("AES/OFB/PKCS5Padding");
+        cipher.init(Cipher.DECRYPT_MODE,this.aesKey,new IvParameterSpec(this.aesIV));
+        return cipher.doFinal(message);
+    }
+    public byte[] base64Encoder(byte[] message){
+        return Base64.getEncoder().encode(message);
+    }
+    public byte[] base64Decoder(byte[] message){
+        return Base64.getDecoder().decode(message);
+    }
    /* public static void main(String[] args) throws  Exception {
         KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
