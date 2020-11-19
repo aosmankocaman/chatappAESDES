@@ -1,5 +1,6 @@
 import javax.crypto.*;
 import javax.crypto.spec.IvParameterSpec;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 public class CipherBlock {
@@ -14,7 +15,50 @@ public class CipherBlock {
         this.aesKey=aesKey;
 
     }
+    public  byte[] encryption(Packet packet,byte [] message){
+        try{
+            switch (packet.getMethod()){
+                case "AES":switch (packet.getMode()){
+                    case "CBC":
+                        return  base64Encoder(AESCBCEncryption(message));
+                    case "OFB":
+                        return  base64Encoder(AESOFBEncryption(message));
 
+                }
+                case "DES":switch (packet.getMode()){
+                    case "CBC":
+                        return  base64Encoder(DESCBCEncryption(message));
+                    case "OFB":
+                        return  base64Encoder(DESOFBEncryption(message));
+
+                }
+            }
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+    }
+        public byte[] decryption(Packet packet,byte [] message){
+            try{
+                switch (packet.getMethod()){
+                    case "AES":switch (packet.getMode()){
+                        case "CBC":
+                            return  AESCBCDecryption(base64Decoder(message));
+                        case "OFB":
+                            return  AESOFBDecryption(base64Decoder(message));
+                    }
+                    case "DES":switch (packet.getMode()){
+                        case "CBC":
+                            return  DESCBCDecryption(base64Decoder(message));
+                        case "OFB":
+                            return  DESOFBDecryption(base64Decoder(message));
+                    }
+                }
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+            return null;
+    }
     public byte[] DESCBCEncryption( byte[] message) throws Exception {
         Cipher cipher=Cipher.getInstance("DES/CBC/PKCS5Padding");
         cipher.init(Cipher.ENCRYPT_MODE,this.desKey,new IvParameterSpec(this.desIV));

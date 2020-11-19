@@ -6,7 +6,8 @@ import java.awt.event.*;
 
 import java.nio.charset.StandardCharsets;
 
-public class Gui   {
+
+public class Gui  extends JFrame  {
     private JPanel rootPanel;
     private JButton connectButton;
     private JButton disconnectButton;
@@ -32,6 +33,8 @@ public class Gui   {
     private ButtonGroup modes;
     private ButtonGroup methods;
     private Client client=null;
+    private Packet packet;
+
     public Gui() {
         setup();
 
@@ -50,25 +53,62 @@ public class Gui   {
 
 
     }
+
     private void closeWindow(){
         System.out.println("saasa");
         this.username=null;
         if(client!=null)
-             this.client.closeConnection();
+            this.client.closeConnection();
+        this.packet=null;
         this.client=null;
 
     }
     private void setSendButton(ActionEvent actionEvent) {
         cryptedText.setText("");
         notCryptedText.setText("");
+        this.client.request(this.packet);
         encryption=false;
         activateButtons();
 
     }
 
     private void setEncryptButton(ActionEvent e) {
-        encryption=true;
-        activateButtons();
+        if(connection){
+            if(!notCryptedText.getText().equals("")){
+                if(CBCRadioButton.isSelected() && AESRadioButton.isSelected()){
+                   // System.out.println("CBC with AES");
+                    this.packet.setMode("CBC");
+                    this.packet.setMethod("AES");
+                }
+                else if(CBCRadioButton.isSelected() && DESRadioButton.isSelected()){
+                    //System.out.println("CBC with DES");
+                    this.packet.setMode("CBC");
+                    this.packet.setMethod("DES");
+
+                }
+                else if(OFBRadioButton.isSelected() && AESRadioButton.isSelected()){
+                   // System.out.println("OFB with AES");
+                    this.packet.setMode("OFB");
+                    this.packet.setMethod("AES");
+
+                }
+                else{
+                    //System.out.println("OFB with DES");
+                    this.packet.setMode("OFB");
+                    this.packet.setMethod("DES");
+
+                }
+                encryption=true;
+                packet.setText(this.client.getCipherBlock().encryption(this.packet,notCryptedText.getText().getBytes(StandardCharsets.UTF_8)));
+                cryptedText.setText(new String(this.packet.getText()));
+                activateButtons();
+
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Please write a message before Encrypting.");
+            }
+        }
+        else JOptionPane.showMessageDialog(this, "You have to connect first.");
 
     }
 
@@ -76,39 +116,42 @@ public class Gui   {
     public void addTextToMsgArea(String msg){
         this.msgArea.insert(msg+"\n",this.msgArea.getText().length());
     }
+
     public void setDisconnectButton(ActionEvent e){
 
         //addTextToMsgArea(username + " disconnected.");
-
         connection=false;
         encryption=false;
         activateButtons();
         this.username=null;
         if(client!=null)
             client.closeConnection();
+        this.packet=null;
         client=null;
 
     }
     public void setConnectButton( ActionEvent e){
         username = (String)JOptionPane.showInputDialog(
                 "Enter Username: ");
-            if(username!=null){
-                if(!username.equals("")){
-                    this.client=new Client(this,username);
-                    connection=true;
-                    activateButtons();
-                }
+        if(username!=null){
+            if(!username.equals("")){
+                this.client=new Client(this,username);
+                packet=new Packet(username,true);
+                connection=true;
+                activateButtons();
             }
+            else JOptionPane.showMessageDialog(this,"Please enter valid name.");
+        }
 
     }
     public void activateButtons(){
-        encryptButton.setEnabled(connection);
         sendButton.setEnabled(connection&&encryption);
         disconnectButton.setEnabled(connection);
         connectButton.setEnabled(!connection);
     }
 
     public void setup(){
+
         modes = new ButtonGroup();
         modes.add(CBCRadioButton);
         modes.add(OFBRadioButton);
@@ -123,19 +166,13 @@ public class Gui   {
         cryptedText.setEditable(false);
         activateButtons();
 
-
-
         methods = new ButtonGroup();
         methods.add(AESRadioButton);
         methods.add(DESRadioButton);
-        JFrame frame=new JFrame();
-        frame.add(rootPanel);
-        frame.setTitle("Crypto Messenger");
-        frame.setSize(840,950);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
+        add(rootPanel);
+        setTitle("Crypto Messenger");
+        setSize(840,950);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         notCryptedText.setLineWrap(true);
         notCryptedText.setWrapStyleWord(true);
@@ -145,7 +182,7 @@ public class Gui   {
         cryptedText.setWrapStyleWord(true);
 
 
-        frame.addWindowListener(new WindowAdapter() {
+        addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 super.windowClosing(e);

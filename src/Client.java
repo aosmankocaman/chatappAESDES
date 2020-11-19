@@ -54,10 +54,12 @@ public class Client extends Thread{
 
             try {
 
-                if(!packet.isOpen()||Thread.interrupted())
+                if(!packet.isOpen())
                     break;
                 packet = (Packet) in.readObject();
-
+                if(packet.isOpen()){
+                    mainPanel.addTextToMsgArea(packet.getName()+" > "+new String(cipherBlock.decryption(packet,packet.getText())));
+                }
                 //mainPanel.msgArea.insert("\n"+response.getName(),mainPanel.msgArea.getText().length());
                 // if(response.isOpen()) {
                 // System.out.println(response.getName());
@@ -73,8 +75,12 @@ public class Client extends Thread{
     }
     public void request(Packet packet) {
         try {
-            System.out.println(packet.isOpen());
-            out.writeObject(packet);
+            this.packet.setText(packet.getText());
+            this.packet.setMethod(packet.getMethod());
+            this.packet.setMode(packet.getMode());
+            this.packet.setOpen(packet.isOpen());
+            this.packet.setUserName(packet.getUserName());
+            out.writeObject(this.packet);
             out.flush();
         }catch (Exception e){
             e.printStackTrace();
