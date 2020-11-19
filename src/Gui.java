@@ -30,6 +30,7 @@ public class Gui  extends JFrame  {
     private boolean encryption=false;
     private ButtonGroup modes;
     private ButtonGroup methods;
+    private String username;
 
     public Gui() throws Exception {
         setup();
@@ -50,7 +51,9 @@ public class Gui  extends JFrame  {
 
     }
 
+
     private void setSendButton(ActionEvent actionEvent) {
+
         cryptedText.setText("");
         notCryptedText.setText("");
         encryption=false;
@@ -59,8 +62,29 @@ public class Gui  extends JFrame  {
     }
 
     private void setEncryptButton(ActionEvent e) {
-        encryption=true;
-        activateButtons();
+        if(connection){
+            if(!notCryptedText.getText().equals("")){
+                if(CBCRadioButton.isSelected() && AESRadioButton.isSelected()){
+                    System.out.println("CBC with AES");
+                }
+                else if(CBCRadioButton.isSelected() && DESRadioButton.isSelected()){
+                    System.out.println("CBC with DES");
+                }
+                else if(OFBRadioButton.isSelected() && AESRadioButton.isSelected()){
+                    System.out.println("OFB with AES");
+                }
+                else{
+                    System.out.println("OFB with DES");
+                }
+                encryption=true;
+                cryptedText.setText("encryption");
+                activateButtons();
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Please write a message before Encrypting.");
+            }
+        }
+        else JOptionPane.showMessageDialog(this, "You have to connect first.");
 
     }
 
@@ -68,19 +92,43 @@ public class Gui  extends JFrame  {
     public void addTextToMsgArea(String msg){
         this.msgArea.insert(msg+"\n",this.msgArea.getText().length());
     }
+
     public void setDisconnectButton(ActionEvent e){
-        addTextToMsgArea("alis");
+
+        addTextToMsgArea(username + " disconnected.");
+
         connection=false;
         encryption=false;
         activateButtons();
 
     }
+
+    public boolean connecting(boolean valid){
+        username = (String)JOptionPane.showInputDialog(
+                "Enter Username: ");
+        if(username.equals("")){
+            JOptionPane.showMessageDialog(this,"Please enter valid name.");
+            return false;
+        }
+        else return true;
+
+
+    }
     public void setConnectButton( ActionEvent e){
-            connection=true;
-            activateButtons();
+        boolean valid = false;
+
+        while(!valid){
+            valid = connecting(false);
+        }
+
+
+
+        connection=true;
+        activateButtons();
     }
     public void activateButtons(){
-        encryptButton.setEnabled(connection);
+
+
         sendButton.setEnabled(connection&&encryption);
         disconnectButton.setEnabled(connection);
         connectButton.setEnabled(!connection);
@@ -100,8 +148,6 @@ public class Gui  extends JFrame  {
         msgArea.setEditable(false);
         cryptedText.setEditable(false);
         activateButtons();
-
-
 
         methods = new ButtonGroup();
         methods.add(AESRadioButton);
