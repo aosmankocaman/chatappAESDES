@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 import java.nio.charset.StandardCharsets;
 
-public class Gui  extends JFrame  {
+public class Gui   {
     private JPanel rootPanel;
     private JButton connectButton;
     private JButton disconnectButton;
@@ -28,10 +28,11 @@ public class Gui  extends JFrame  {
     public JTextArea msgArea;
     private boolean connection=false;
     private boolean encryption=false;
+    private String username;
     private ButtonGroup modes;
     private ButtonGroup methods;
-
-    public Gui() throws Exception {
+    private Client client=null;
+    public Gui() {
         setup();
 
         connectButton.addActionListener(
@@ -49,7 +50,14 @@ public class Gui  extends JFrame  {
 
 
     }
+    private void closeWindow(){
+        System.out.println("saasa");
+        this.username=null;
+        if(client!=null)
+             this.client.closeConnection();
+        this.client=null;
 
+    }
     private void setSendButton(ActionEvent actionEvent) {
         cryptedText.setText("");
         notCryptedText.setText("");
@@ -69,15 +77,29 @@ public class Gui  extends JFrame  {
         this.msgArea.insert(msg+"\n",this.msgArea.getText().length());
     }
     public void setDisconnectButton(ActionEvent e){
-        addTextToMsgArea("alis");
+
+        //addTextToMsgArea(username + " disconnected.");
+
         connection=false;
         encryption=false;
         activateButtons();
+        this.username=null;
+        if(client!=null)
+            client.closeConnection();
+        client=null;
 
     }
     public void setConnectButton( ActionEvent e){
-            connection=true;
-            activateButtons();
+        username = (String)JOptionPane.showInputDialog(
+                "Enter Username: ");
+            if(username!=null){
+                if(!username.equals("")){
+                    this.client=new Client(this,username);
+                    connection=true;
+                    activateButtons();
+                }
+            }
+
     }
     public void activateButtons(){
         encryptButton.setEnabled(connection);
@@ -106,10 +128,14 @@ public class Gui  extends JFrame  {
         methods = new ButtonGroup();
         methods.add(AESRadioButton);
         methods.add(DESRadioButton);
-        add(rootPanel);
-        setTitle("Crypto Messenger");
-        setSize(840,950);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame frame=new JFrame();
+        frame.add(rootPanel);
+        frame.setTitle("Crypto Messenger");
+        frame.setSize(840,950);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
 
         notCryptedText.setLineWrap(true);
         notCryptedText.setWrapStyleWord(true);
@@ -119,11 +145,11 @@ public class Gui  extends JFrame  {
         cryptedText.setWrapStyleWord(true);
 
 
-        addWindowListener(new WindowAdapter() {
+        frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 super.windowClosing(e);
-                System.out.println("saasa");
+                closeWindow();
             }
 
         });
