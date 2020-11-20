@@ -55,7 +55,7 @@ public class Gui  extends JFrame  {
     }
 
     private void closeWindow(){
-        System.out.println("saasa");
+
         this.username=null;
         if(client!=null)
             this.client.closeConnection();
@@ -76,7 +76,7 @@ public class Gui  extends JFrame  {
         if(connection){
             if(!notCryptedText.getText().equals("")){
                 if(CBCRadioButton.isSelected() && AESRadioButton.isSelected()){
-                   // System.out.println("CBC with AES");
+                    // System.out.println("CBC with AES");
                     this.packet.setMode("CBC");
                     this.packet.setMethod("AES");
                 }
@@ -87,7 +87,7 @@ public class Gui  extends JFrame  {
 
                 }
                 else if(OFBRadioButton.isSelected() && AESRadioButton.isSelected()){
-                   // System.out.println("OFB with AES");
+                    // System.out.println("OFB with AES");
                     this.packet.setMode("OFB");
                     this.packet.setMethod("AES");
 
@@ -118,7 +118,7 @@ public class Gui  extends JFrame  {
     }
 
     public void setDisconnectButton(ActionEvent e){
-
+        connectionStatusLabel.setText("Not Connected");
         //addTextToMsgArea(username + " disconnected.");
         connection=false;
         encryption=false;
@@ -135,6 +135,7 @@ public class Gui  extends JFrame  {
                 "Enter Username: ");
         if(username!=null){
             if(!username.equals("")){
+                connectionStatusLabel.setText("Connected");
                 this.client=new Client(this,username);
                 packet=new Packet(username,true);
                 connection=true;

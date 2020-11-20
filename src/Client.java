@@ -97,7 +97,7 @@ public class Client extends Thread{
 
     }
     public void close(){
-        System.out.println("close");
+        //System.out.println("close");
         try{
             in.close();
             out.close();
