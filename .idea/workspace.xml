@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="83c65336-76f9-4ec8-91f6-b1d3807ed805" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/CipherBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/CipherBlock.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Gui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CipherBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CipherBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Packet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerThread.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,6 +82,8 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="chatappAESDES" />
       <method v="2">
@@ -89,6 +91,8 @@
       </method>
     </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="chatappAESDES" />
       <method v="2">
@@ -109,6 +113,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.guitest" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.test" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -137,6 +148,7 @@
       <workItem from="1605772060447" duration="4948000" />
       <workItem from="1605793903384" duration="10187000" />
       <workItem from="1605812947983" duration="12742000" />
+      <workItem from="1605867153092" duration="4428000" />
     </task>
     <servers />
   </component>

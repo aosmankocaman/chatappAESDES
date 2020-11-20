@@ -58,7 +58,8 @@ public class Client extends Thread{
                     break;
                 packet = (Packet) in.readObject();
                 if(packet.isOpen()){
-                    mainPanel.addTextToMsgArea(packet.getName()+" > "+new String(cipherBlock.decryption(packet,packet.getText())));
+                    mainPanel.addTextToMsgArea(new String(packet.getText()));
+                    mainPanel.addTextToMsgArea(packet.getUserName()+" > "+new String(cipherBlock.decryption(packet,packet.getText())));
                 }
                 //mainPanel.msgArea.insert("\n"+response.getName(),mainPanel.msgArea.getText().length());
                 // if(response.isOpen()) {

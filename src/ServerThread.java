@@ -21,14 +21,15 @@ public class ServerThread extends Thread {
             out=new ObjectOutputStream(socket.getOutputStream());
             in=new ObjectInputStream(socket.getInputStream());
             sendKeysAndIV(server.keysAndIV);
-            System.out.println(new String(server.keysAndIV.getAESIV()));
+
             while (true){
                 Packet packet = (Packet) in.readObject();
-                System.out.println(packet.isOpen());
+
                 if(!packet.isOpen()){
                     sendPacket(packet);
                     break;
                 }
+                server.writeLogFile(packet);
                 sendAll(packet);
             }
             close();

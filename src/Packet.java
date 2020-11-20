@@ -15,14 +15,6 @@ public class Packet implements Serializable {
         text=null;
     }
 
-    public String getName() {
-        return userName;
-    }
-
-    public void setName(String name) {
-        this.userName = name;
-    }
-
     public String getMode() {
         return mode;
     }
