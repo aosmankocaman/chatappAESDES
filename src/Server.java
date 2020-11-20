@@ -1,3 +1,4 @@
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -69,6 +70,7 @@ public class Server {
             System.out.println("DES IV > "+new String(Base64.getEncoder().encode(keysAndIV.getDESIV())));
             System.out.println("AES Key > "+new String(Base64.getEncoder().encode(keysAndIV.getAESKey().getEncoded())));
             System.out.println("DES Key > "+new String(Base64.getEncoder().encode(keysAndIV.getDESKey().getEncoded())));
+
             logFile.close();
         } catch (IOException e) {
             e.printStackTrace();

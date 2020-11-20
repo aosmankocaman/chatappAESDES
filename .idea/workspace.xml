@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c65336-76f9-4ec8-91f6-b1d3807ed805" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Packet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Packet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerThread.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +143,7 @@
       <workItem from="1605772060447" duration="4948000" />
       <workItem from="1605793903384" duration="10187000" />
       <workItem from="1605812947983" duration="12742000" />
-      <workItem from="1605867153092" duration="4428000" />
+      <workItem from="1605867153092" duration="5913000" />
     </task>
     <servers />
   </component>
