@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c65336-76f9-4ec8-91f6-b1d3807ed805" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/chatappAESDES/CipherBlock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/chatappAESDES/KeysAndIV.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Packet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/chatappAESDES/ServerThread.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CipherBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/KeysAndIV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Packet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Gui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Gui$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Gui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/chatappAESDES/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
